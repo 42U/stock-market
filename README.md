@@ -3,7 +3,7 @@ A collection of Python scripts that do things related to the stock market.
 # Project Title
 
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/42u/repo.svg)](https://github.com/42u/repo/stock-market)
+[![GitHub stars](https://img.shields.io/github/stars/42u/repo.svg)](https://github.com/42U/stock-market/tree/main)
 
 > All files are standalone and may have different dependencies. Each file and the installation of dependencies are listed below.
 
