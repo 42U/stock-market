@@ -18,7 +18,7 @@ A collection of Python scripts that do things related to the stock market.
 - [Contact](#contact)
 
 ## pull_yfinance_insert_postgres
-### Usage
+#### Usage
 - Basic class structure, uses Yahoo Finance (yfinance) to pull stock market data, and Postgres Python adapter 'psycopg2' library for database interactions.
 ```shell
 $ pip install psycopg2, yfinance
