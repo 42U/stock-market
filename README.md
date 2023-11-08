@@ -3,7 +3,7 @@ A collection of Python scripts that do things related to the stock market.
 # Project Title
 
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/42u/repo.svg)](https://github.com/42U/stock-market/tree/main)
+[![GitHub stars](https://img.shields.io/github/stars/42u/stock-market.svg)](https://github.com/42U/stock-market)
 
 > All files are standalone and may have different dependencies. Each file and the installation of dependencies are listed below.
 
@@ -25,8 +25,8 @@ A collection of Python scripts that do things related to the stock market.
 
 ## Installation
 
-1. Each Python file may have different dependencies a requirements.txt may be accompanied.
-2. Placeholder for dependencies.
+2. Each Python file may have different dependencies a requirements.txt may be accompanied.
+3. Placeholder for dependencies.
 
 ```shell
-$ pip install psycopg2, yfinance
+$ pip install psycopg3, yfinance
