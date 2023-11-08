@@ -11,12 +11,12 @@ A collection of Python scripts that do things related to the stock market.
 
 **click the file you're trying to use for instructions on how to use:**
 - [pull_yfinance_insert_postgres](#pull_yfinance_insert_postgres)
-- [Installation](#installation)
+<!-- - [Installation](#installation)
 - [Usager](#usager)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
-
+-->
 ## pull_yfinance_insert_postgres
 #### What does it do?
 - This script pulls the most recent day's open, high, low, close data and inserts it into a Postgres database. I use it with cronjobs to create a time series database that updates everyday after market close.
@@ -51,7 +51,7 @@ if __name__ == '__main__':
 ```shell
 $ python pull_yfinance_insert_postgres.py
 ```
-
+<!--
 ## Installation
 
 2. Each Python file may have different dependencies a requirements.txt may be accompanied.
@@ -59,3 +59,4 @@ $ python pull_yfinance_insert_postgres.py
 
 ```shell
 $ pip install psycopg3, yfinance
+-->
