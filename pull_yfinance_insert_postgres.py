@@ -11,7 +11,7 @@ class PREPDATA:
         self.low = 0
         self.close = 0
         self.vol = 0
-        # The connection parameters below should be changed to match your database settings
+        # The connection parameters below should be modified to match your database settings
         self.db_params = {
             'host': 'ENTER_YOUR_POSTGRES_HOST_HERE',
             'database': 'DATABASE_NAME',
@@ -101,19 +101,19 @@ class PREPDATA:
 
 if __name__ == '__main__':
     # Instantiate the PREPDATA class with a stock market ticker to search for
-    spy = PREPDATA("SPY")
+    ticker = PREPDATA("SPY")
     
     # Set table to use in Postgres
     db_table = "spydaily"
 
     # Set the results from the search to the class variables
-    spy.setData()
+    ticker.setData()
     
     # Check to make sure data was received and set to variables
-    print(spy)
+    print(ticker)
     
     # Insert results into the database
-    spy.settoDB(db_table)
+    ticker.settoDB(db_table)
 
     # Query the database to make sure data was inserted
-    print(spy.pullfromDB(db_table))
+    print(ticker.pullfromDB(db_table))

@@ -10,8 +10,9 @@ A collection of Python scripts that do things related to the stock market.
 > All files are standalone and may have different dependencies. Each file is listed below and the installation of dependencies are listed within the section for that file.
 
 **click the file you're trying to use for instructions on how to use:**
-- [pull_yfinance_insert_postgres](#pull_yfinance_insert_postgres)
-<!-- - [Installation](#installation)
+- [pull_yfinance_insert_postgres.py](#pull_yfinance_insert_postgres)
+<!-- 
+- [Installation](#installation)
 - [Usager](#usager)
 - [Contributing](#contributing)
 - [License](#license)
@@ -19,13 +20,13 @@ A collection of Python scripts that do things related to the stock market.
 -->
 ## pull_yfinance_insert_postgres
 #### What does it do?
-- This script pulls the most recent day's open, high, low, close data and inserts it into a Postgres database. I use it with cronjobs to create a time series database that updates everyday after market close.
+- This script pulls the most recent day's open, high, low, close data and inserts it into a Postgres database. I use it with a cronjob to add to a time series database that updates everyday after market close.
 
 #### How to use it:
 - Basic class structure, uses Yahoo Finance (yfinance) to pull stock market data, and Postgres Python adapter 'psycopg2' library for database interactions.
 - Make sure you have the following libraries installed:
 ```shell
-$ pip install yfinance psycopg2
+pip install yfinance psycopg2
 ```
 #### Modify
 - The script variable for database parameters needs to be modified to work with your Postgres database. Open your favorite text editor and modify the following to your connection settings:
@@ -41,15 +42,15 @@ self.db_params = {
 - By default the script will search for the ticker: SPY
 - If you want to search for other tickers then you need to modify the section where 'PREPDATA("SPY")' is called. 
 
-*example for searching GM ticker*
+*example for searching 'GM' ticker*
 ```python
 if __name__ == '__main__':
     # Instantiate the PREPDATA class with a stock market ticker to search for
     ticker = PREPDATA("GM")
 ```
-#### Run the Script
+#### Run the script
 ```shell
-$ python pull_yfinance_insert_postgres.py
+python pull_yfinance_insert_postgres.py
 ```
 <!--
 ## Installation
