@@ -11,6 +11,8 @@ A collection of Python scripts that do things related to the stock market.
 
 **click the file you're trying to use for instructions on how to use:**
 - [pull_yfinance_insert_postgres.py](#pull_yfinance_insert_postgres)
+- [crypto_fill_db.py](#crypto_fill_db)
+- [crypto_add_toDB.py](#crypto_add_toDB)
 <!-- 
 - [Installation](#installation)
 - [Usager](#usager)
@@ -52,6 +54,9 @@ if __name__ == '__main__':
 ```shell
 python pull_yfinance_insert_postgres.py
 ```
+## crypto_fill_db
+#### What does it do?
+- This script assumes that you have a Postgres database and a table with the following schema: 
 <!--
 ## Installation
 
