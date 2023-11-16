@@ -56,7 +56,48 @@ python pull_yfinance_insert_postgres.py
 ```
 ## crypto_fill_db
 #### What does it do?
-- This script assumes that you have a Postgres database and a table with the following schema: 
+- This script takes a [Binance API](https://github.com/binance/binance-connector-python) key to get historical crypto currency data, assumes that you have a Postgres database and a table with the following schema to store the crypto data: 
+
+![Thumbnail](imgz/Screenshot%202023-11-10%20at%2010.26.39%20AM.png)
+- In this case it will fill the database table 'batusdt' with historical data: date (in milliseconds), open, high, low, close, volume (abbreviated to 'vol').
+
+#### How to use it:
+- Make sure you have the following dependencies installed:
+```shell
+pip install binance-connector psycopg2 
+```
+#### Modify
+- The db_params variable needs to modified to take your connection settings for your Postgres database:
+- I use an environment variable for each of the necessary fields of the dictionary, feel free to use whatever makes sense to you.
+```python
+    self.db_params = {
+        'host': os.environ.get("PGHOST"),
+        'database': os.environ.get("PGDBNAME"),
+        'user': os.environ.get("PGUSERNAME"),
+        'password': os.environ.get("PGDBPASS"),
+        'port': os.environ.get("PGDBPORT"),
+    }
+```
+- The default coin that the script pulls data for is 'batusdt', this can be changed in the section that has the coin variable:
+- You can change the coin variable to any crypto pair that Binance supports.
+- I also use the crypto pair as the database table name for simplicity.
+```python
+if __name__ == '__main__':
+ -> coin = 'batusdt' <-
+    # Instantiate the PREPDATA class with a stock market ticker to search for
+    ticker = PREPDATA(coin)
+    
+    # Set table to use in Postgres
+ -> db_table = coin <-
+```
+- If you used a different name for your table change the db_table variable:
+```python
+    db_table = <your table name>
+```
+
+#### Run the script
+- That's pretty much it
+
 <!--
 ## Installation
 
